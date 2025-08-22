@@ -26,7 +26,7 @@ Trained with **YOLOv8 segmentation**, working towards The model to optimized for
 
 ---
 
-### 1️⃣ Clone & Install
+### 1️⃣ You may contribute by Clone & Install this project 
 ```bash
 git clone https://github.com/Harin22/real-time-bubble-inspection.git
 cd real-time-bubble-inspection
