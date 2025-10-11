@@ -1,7 +1,7 @@
 # Real-Time Bubble Detection Using Machine Learning for Quality Control in Advanced Manufacturing​
 
 The project will Detect, count, measure, and track bubbles in a reactor flow for **quality control in advanced manufacturing**.  
-Trained with **YOLOv8 segmentation**, working towards The model to optimized for real-time deployment and can be deployed on a Raspberry Pi 5.**
+Trained with **YOLOv8 segmentation**, working towards The model to optimized for real-time deployment and can be deployed on a Raspberry Pi 5.
 
 ---
 
