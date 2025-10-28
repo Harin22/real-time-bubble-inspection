@@ -5,7 +5,7 @@ Trained with **YOLOv8 segmentation**, working towards The model to optimized for
 
 ---
 
-## 🚀 Features
+## Features
 - Bubble **detection + segmentation** (YOLOv8-S / YOLOv8-M)
 - Bubble **counting** in video streams
 - Bubble **size measurement** in pixels (mm conversion possible with calibration)
@@ -14,7 +14,7 @@ Trained with **YOLOv8 segmentation**, working towards The model to optimized for
 
 ---
 
-## 📂 Files
+## Files
 - `Bubble_model_training.ipynb` → Train YOLOv8 segmentation model on your dataset  
 - `Bubble_model_testing_image.ipynb` → Test on a single image  
 - `Bubble_model_testing_video.ipynb` → Test on videos. To detect count + measure bubbles  
@@ -22,11 +22,11 @@ Trained with **YOLOv8 segmentation**, working towards The model to optimized for
 
 ---
 
-🔧 Current Version: bubble_insp_ver0.1 — actively maintained and deployed in the repository.
+ Current Version: bubble_insp_ver0.2 — actively maintained and deployed in the repository.
 
 ---
 
-### 1️⃣ You may contribute by Clone & Install this project 
+### contribute by Clone & Install this project 
 ```bash
 git clone https://github.com/Harin22/real-time-bubble-inspection.git
 cd real-time-bubble-inspection
