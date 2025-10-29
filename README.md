@@ -22,6 +22,12 @@ Trained with **YOLOv8 segmentation**, working towards The model to optimized for
 
 ---
 
+## The ver 1 result
+<img width="816" height="380" alt="res1" src="https://github.com/user-attachments/assets/1a814e24-b0d0-4397-84e3-c0c4fd8bfc33" />
+
+
+---
+
  Current Version: bubble_insp_ver0.2 — actively maintained and deployed in the repository.
 
 ---
