@@ -5,6 +5,12 @@ Trained with **YOLOv8 segmentation**, working towards The model to optimized for
 
 ---
 
+### Pipeline Overview
+
+<img src="https://github.com/user-attachments/assets/27afd1dc-7303-49c0-ad04-40e3bc9e5d3d" width="100%">
+
+---
+
 ## Features
 - Bubble **detection + segmentation** (YOLOv8-S / YOLOv8-M)
 - Bubble **counting** in video streams
