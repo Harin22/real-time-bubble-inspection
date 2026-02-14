@@ -1,46 +1,93 @@
-# Real-Time Bubble Detection Using Machine Learning for Quality Control in Advanced Manufacturing​
+# Real-Time Bubble Detection for Advanced Manufacturing
 
-The project will Detect, count, measure, and track bubbles in a reactor flow for **quality control in advanced manufacturing**.  
-Trained with **YOLOv8 segmentation**, working towards The model to optimized for real-time deployment and can be deployed on a Raspberry Pi 5.
+Lightweight computer vision pipeline for detecting, counting, measuring, and tracking bubbles in continuous reactor flow systems.
+
+Built using **YOLOv8 instance segmentation** and optimized for **edge deployment on Raspberry Pi 5**.
 
 ---
 
-### Pipeline Overview
+## Pipeline Overview
 
 <img src="https://github.com/user-attachments/assets/27afd1dc-7303-49c0-ad04-40e3bc9e5d3d" width="100%">
 
 ---
 
 ## Features
-- Bubble **detection + segmentation** (YOLOv8-S / YOLOv8-M)
-- Bubble **counting** in video streams
-- Bubble **size measurement** in pixels (mm conversion possible with calibration)
-- **Tracking** across frames (Centroid Tracker / OC-SORT)
-- Export to **ONNX** for Raspberry Pi deployment
+
+- Instance segmentation (YOLOv8s-seg / YOLOv8n-seg)
+- Per-frame bubble counting
+- Bubble radius measurement
+- Tracking using Centroid Tracker / OC-SORT
+- ONNX export for cross-platform inference
+- INT8 dynamic quantization for embedded deployment
 
 ---
 
-## Files
-- `Bubble_model_training.ipynb` → Train YOLOv8 segmentation model on your dataset  
-- `Bubble_model_testing_image.ipynb` → Test on a single image  
-- `Bubble_model_testing_video.ipynb` → Test on videos. To detect count + measure bubbles  
-- `MaskRCNN_OCSORT_experiments.ipynb` → Experimental advanced approach (Working towards it)
+## Model Comparison
+
+| Model | Precision | mAP@0.5 | FPS |
+|--------|------------|----------|------|
+| YOLOv8n-seg | 0.775 | 0.876 | 65 |
+| YOLOv8s-seg | 0.797 | 0.869 | 35 |
+| Mask R-CNN + OC-SORT | 0.83 | 0.880 | 12 |
+
+**YOLOv8n-seg selected** for best speed–accuracy tradeoff for real-time edge inference.
 
 ---
 
-## The ver 1 result
-<img width="816" height="380" alt="res1" src="https://github.com/user-attachments/assets/1a814e24-b0d0-4397-84e3-c0c4fd8bfc33" />
+## Edge Optimization: ONNX + INT8 Quantization
 
+The optimized YOLOv8n-seg model was exported to ONNX (FP32) and dynamically quantized to INT8 using ONNX Runtime.
+
+### Quantization Results
+
+| Format | Size | Precision | mAP@0.5 | FPS |
+|--------|------|------------|----------|------|
+| FP32 | 7 MB | 0.775 | 0.876 | 32 |
+| INT8 | 3.5 MB | 0.770 | 0.870 | 65 |
+
+**Results:**
+- 50% model size reduction  
+- ~2× inference speed improvement  
+- Minimal accuracy drop  
+
+Optimized for CPU-based inference on Raspberry Pi 5.
 
 ---
 
- Current Version: bubble_insp_ver0.2 — actively maintained and deployed in the repository.
+## Example Output
+
+<img width="816" height="380" src="https://github.com/user-attachments/assets/1a814e24-b0d0-4397-84e3-c0c4fd8bfc33" />
 
 ---
 
-### contribute by Clone & Install this project 
+## Repository Structure
+
+- `baseline_bubble_training.ipynb` → YOLOv8 training pipeline  
+- `bubble_model_testing_v1.ipynb` → Image inference  
+- `bubble_model_testing_v2.ipynb` → Video + tracking pipeline  
+- `onnx_quantization.ipynb` → ONNX export and INT8 optimization  
+
+---
+
+## Installation
+
 ```bash
 git clone https://github.com/Harin22/real-time-bubble-inspection.git
 cd real-time-bubble-inspection
 pip install -r requirements.txt
+```
 
+---
+
+## Deployment Target
+
+- Raspberry Pi 5  
+- Pi Camera Module  
+- Real-time monitoring in continuous reactor flow systems  
+
+---
+
+## License
+
+MIT License
