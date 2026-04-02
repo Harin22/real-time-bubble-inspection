@@ -21,7 +21,7 @@ Built using **YOLOv8 instance segmentation** and optimized for **edge deployment
 - ONNX export for cross-platform inference
 - INT8 dynamic quantization for embedded deployment
 
----
+--- 
 
 ## Model Comparison
 
