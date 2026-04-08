@@ -60,6 +60,15 @@ Optimized for CPU-based inference on Raspberry Pi 5.
 <img width="816" height="380" src="https://github.com/user-attachments/assets/1a814e24-b0d0-4397-84e3-c0c4fd8bfc33" />
 
 ---
+## Dockerized Inference Service
+
+Containerized ONNX Runtime inference service for the INT8-optimized bubble segmentation model.
+
+**Location:** `docker_setup/`
+
+**Files included:**
+
+---
 
 ## Repository Structure
 
